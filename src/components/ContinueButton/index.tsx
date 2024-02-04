@@ -11,9 +11,9 @@ interface ContinueButtonProps extends PropsWithChildren {
 
 const ContinueButton: React.FC<ContinueButtonProps> = ({ isDisabled, isLoading, onPress }) => {
   return (
-    <Button disabled={isDisabled} onClick={onPress} isLoading={isLoading}>
+    <Button isDisabled={isDisabled} onClick={onPress} isLoading={isLoading}>
       {isLoading ? (
-        <ReactLoading type="spin" color="gray" height={45} width={45} />
+        <ReactLoading type="spin" color="white" height={30} width={30} />
       ) : (
         <ChevronRight color={isDisabled ? "gray" : "white"} size={35} />
       )}
